@@ -1,0 +1,26 @@
+/* Corrección: Se agregó la palabra "and" */
+@media screen and (min-width: 768px) {
+  body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: aliceblue; 
+  }
+}
+
+footer {
+  background-color: rgb(0, 78, 78);
+}
+
+.mi-boton {
+  background-color: rgb(229, 255, 0);
+  /* Nota: 10 segundos es una transición muy lenta, suele usarse entre 0.3s y 0.5s */
+  transition: all 10s; 
+}
+
+.mi-boton:hover {
+  background-color: aliceblue;
+  border-radius: 90px;
+}
+
+.menu {
+  background-color: rgb(0, 0, 114);
+}
