@@ -1,0 +1,263 @@
+/* Variables de color de la paleta inspirada en madera. */
+:root {
+  --wood-black: #211a15; /* Guarda el color negro de la paleta. */
+  --wood-brown: #654832; /* Guarda el color cafe de la paleta. */
+  --wood-gold: #d5a84f; /* Guarda el color amarillo de la paleta. */
+  --wood-cream: #d6c8ae; /* Guarda el color crema del fondo. */
+  --wood-card: #fff8e8; /* Guarda el color claro de las tarjetas. */
+  --wood-border: #b98543; /* Guarda el color de los bordes. */
+}
+
+/* Configuracion base para todos los elementos. */
+* {
+  box-sizing: border-box; /* Incluye padding y borde dentro del ancho total. */
+  font-family: 'Source Sans 3', sans-serif; /* Usa la fuente principal del sitio. */
+}
+
+/* Tipografia decorativa para los titulos. */
+h1,
+h2,
+h3 {
+  font-family: 'Roboto Slab', serif; /* Usa una fuente destacada para titulos. */
+}
+
+/* Define el color y el fondo general de la pagina. */
+body {
+  color: var(--wood-black); /* Define el color general del texto. */
+  background-color: var(--wood-cream); /* Define el color de fondo de la pagina. */
+}
+
+/* Organiza las columnas principales de la pagina. */
+.row {
+  display: flex; /* Coloca los elementos hijos en una fila flexible. */
+  flex-wrap: wrap; /* Permite que los elementos bajen a otra linea. */
+  align-items: stretch; /* Estira los elementos a la altura disponible. */
+}
+
+/* Define los anchos de la grilla de 12 columnas. */
+.col-1 { width: 8.333%; } /* Ocupa una de doce columnas. */
+.col-2 { width: 16.666%; } /* Ocupa dos de doce columnas. */
+.col-3 { width: 25%; } /* Ocupa tres de doce columnas. */
+.col-4 { width: 33.333%; } /* Ocupa cuatro de doce columnas. */
+.col-5 { width: 41.666%; } /* Ocupa cinco de doce columnas. */
+.col-6 { width: 50%; } /* Ocupa seis de doce columnas. */
+.col-7 { width: 58.333%; } /* Ocupa siete de doce columnas. */
+.col-8 { width: 66.666%; } /* Ocupa ocho de doce columnas. */
+.col-9 { width: 75%; } /* Ocupa nueve de doce columnas. */
+.col-10 { width: 83.333%; } /* Ocupa diez de doce columnas. */
+.col-11 { width: 91.666%; } /* Ocupa once de doce columnas. */
+.col-12 { width: 100%; } /* Ocupa todo el ancho disponible. */
+
+/* Estiliza la barra superior y su separacion del contenido. */
+header {
+  width: 100%; /* Hace que el encabezado ocupe todo el ancho. */
+  margin-bottom: 24px; /* Separa el encabezado del contenido. */
+  padding: 16px 24px; /* Agrega espacio interno vertical y horizontal. */
+  border-radius: 12px; /* Redondea las esquinas del encabezado. */
+  background-color: var(--wood-black); /* Pinta el fondo del encabezado. */
+  order: -2; /* Coloca el encabezado antes que los otros elementos. */
+}
+
+/* Centra verticalmente los elementos del encabezado. */
+header .row {
+  align-items: center; /* Centra verticalmente el logo y el menu. */
+}
+
+/* Ordena los enlaces principales en una linea flexible. */
+.menu-principal ul {
+  display: flex; /* Coloca las opciones del menu en linea. */
+  flex-wrap: wrap; /* Permite que el menu se adapte a pantallas pequenas. */
+  justify-content: center; /* Centra las opciones horizontalmente. */
+  gap: 24px; /* Deja 24 pixeles entre cada opcion. */
+  padding: 0; /* Quita el espacio interno predeterminado. */
+  margin: 0; /* Quita el margen predeterminado de la lista. */
+  list-style: none; /* Quita las viñetas de la lista. */
+}
+
+/* Define la apariencia de los enlaces de navegacion. */
+.menu-principal a {
+  color: var(--wood-cream); /* Pinta los enlaces con color crema. */
+  font-size: 1.15rem; /* Aumenta el tamano de las letras. */
+  font-weight: 600; /* Hace el texto seminegrita. */
+  text-decoration: none; /* Quita el subrayado de los enlaces. */
+}
+
+/* Cambia el color del enlace cuando se pasa el cursor. */
+.menu-principal a:hover {
+  color: var(--wood-gold); /* Cambia el enlace a amarillo al pasar el cursor. */
+}
+
+/* Alinea el logo y separa sus dos partes. */
+.logo {
+  display: inline-flex; /* Alinea el logo en una fila. */
+  align-items: center; /* Centra verticalmente las partes del logo. */
+  gap: 8px; /* Separa la insignia del nombre. */
+  color: var(--wood-cream); /* Define el color del logo. */
+  text-decoration: none; /* Quita el subrayado del logo. */
+}
+
+/* Crea la insignia inicial del logo. */
+.logo-badge {
+  display: grid; /* Permite centrar las letras de la insignia. */
+  width: 40px; /* Define el ancho de la insignia. */
+  height: 40px; /* Define el alto de la insignia. */
+  place-items: center; /* Centra las letras horizontal y verticalmente. */
+  border: 2px solid var(--wood-gold); /* Crea el borde amarillo. */
+  border-radius: 8px; /* Redondea la insignia. */
+  color: var(--wood-black); /* Pinta las letras de negro. */
+  background-color: var(--wood-gold); /* Pinta el fondo de amarillo. */
+  font-family: 'Roboto Slab', serif; /* Usa la fuente de los titulos. */
+  font-weight: 800; /* Hace las letras muy gruesas. */
+}
+
+/* Da estilo al nombre de la marca. */
+.logo-text {
+  color: var(--wood-cream); /* Pinta el nombre de la marca de crema. */
+  font-family: 'Roboto Slab', serif; /* Usa la fuente artesanal. */
+  font-size: 1.1rem; /* Define el tamano del nombre. */
+  font-weight: 700; /* Hace el nombre negrita. */
+}
+
+/* Define el estilo comun de las tarjetas. */
+.card {
+  margin: 8px; /* Separa la tarjeta de otros elementos. */
+  padding: 16px; /* Deja espacio entre el borde y el contenido. */
+  border: 1px solid var(--wood-border); /* Crea un borde cafe claro. */
+  background-color: var(--wood-card); /* Pinta el fondo de la tarjeta. */
+}
+
+/* Reserva un espacio uniforme para cada foto. */
+.product-image {
+  width: 100%; /* Hace que la imagen ocupe el ancho de la tarjeta. */
+  height: 180px; /* Reserva una altura uniforme para la imagen. */
+  overflow: hidden; /* Oculta la parte de imagen que sobresalga. */
+  border-radius: 8px; /* Redondea las esquinas de la imagen. */
+  background-color: var(--wood-cream); /* Define un fondo de respaldo. */
+}
+
+/* Ajusta cada imagen al espacio reservado. */
+.product-image img {
+  display: block; /* Evita espacios extra debajo de la imagen. */
+  width: 100%; /* Ajusta la imagen al ancho del contenedor. */
+  height: 100%; /* Ajusta la imagen al alto del contenedor. */
+  object-fit: cover; /* Recorta la imagen sin deformarla. */
+}
+
+/* Muestra exactamente cuatro productos por fila. */
+main > section:first-child {
+  display: grid; /* Organiza los productos en una cuadricula. */
+  grid-template-columns: repeat(4, 1fr); /* Crea cuatro columnas iguales. */
+  gap: 16px; /* Separa las tarjetas entre si. */
+  justify-content: center; /* Centra la cuadricula disponible. */
+}
+
+/* Permite que las columnas de productos se adapten al grid. */
+main > section:first-child > .col-3 {
+  width: auto; /* Deja que el grid controle el ancho de la columna. */
+}
+
+/* Personaliza el marco de cada producto. */
+main > section:first-child .card {
+  height: 100%; /* Iguala la altura de las tarjetas de una fila. */
+  margin: 0; /* Quita el margen para usar el gap del grid. */
+  border: 2px solid var(--wood-gold); /* Crea el marco amarillo. */
+  border-radius: 12px; /* Redondea el marco del producto. */
+  transition: transform 0.2s ease, border-color 0.2s ease; /* Suaviza el efecto hover. */
+}
+
+/* Eleva suavemente la tarjeta al pasar el cursor. */
+main > section:first-child .card:hover {
+  border-color: var(--wood-brown); /* Cambia el borde a cafe. */
+  transform: translateY(-3px); /* Eleva la tarjeta tres pixeles. */
+}
+
+/* Coloca el menu lateral antes del catalogo. */
+.category-menu {
+  align-self: flex-start; /* Alinea el menu en la parte superior. */
+  margin-top: 10px; /* Separa el menu del encabezado. */
+  order: -1; /* Coloca el menu antes del contenido principal. */
+}
+
+/* Redondea y resalta el marco del menu. */
+.category-menu .card {
+  min-height: 100%; /* Permite que el panel llene la altura disponible. */
+  margin: 0; /* Quita el margen interno del panel. */
+  border: 2px solid var(--wood-brown); /* Crea el borde cafe del menu. */
+  border-radius: 16px; /* Redondea las esquinas del menu. */
+}
+
+/* Quita las viñetas de la lista de categorias. */
+.category-menu ul {
+  padding: 0; /* Quita el espacio interno predeterminado. */
+  list-style: none; /* Quita las viñetas de las categorias. */
+}
+
+/* Separa verticalmente las opciones del menu. */
+.category-menu li {
+  margin: 12px 0; /* Separa verticalmente cada categoria. */
+}
+
+/* Colorea los enlaces de categorias. */
+.category-menu a {
+  color: var(--wood-brown); /* Pinta los enlaces de cafe. */
+}
+
+/* Hace que la etiqueta y el selector ocupen todo el menu. */
+.category-menu label,
+.category-menu select {
+  display: block; /* Coloca la etiqueta y el selector en bloques. */
+  width: 100%; /* Hace que ocupen todo el ancho del menu. */
+}
+
+/* Separa la etiqueta del selector. */
+.category-menu label {
+  margin-bottom: 8px; /* Separa la etiqueta del selector. */
+}
+
+/* Estiliza el selector de marcas. */
+.category-menu select {
+  padding: 8px; /* Agrega espacio interno al selector. */
+  border: 1px solid var(--wood-brown); /* Crea el borde del selector. */
+  border-radius: 6px; /* Redondea las esquinas del selector. */
+  color: var(--wood-cream); /* Pinta el texto del selector de crema. */
+  background-color: var(--wood-black); /* Pinta el selector de negro. */
+}
+
+/* Reserva un espacio entre el menu y los productos en escritorio. */
+@media (min-width: 701px) {
+  body > .row {
+    column-gap: 16px; /* Separa horizontalmente menu y productos. */
+  }
+
+  .category-menu {
+    width: calc(18% - 8px); /* Reserva espacio para el menu y la separacion. */
+  }
+
+  main.col-9 {
+    width: calc(82% - 8px); /* Usa el espacio restante para los productos. */
+    margin-top: 10px; /* Alinea el catalogo con el menu. */
+  }
+}
+
+/* Apila el contenido en pantallas pequeñas. */
+@media (max-width: 700px) {
+  body {
+    padding: 0 2%; /* Agrega un pequeno margen lateral en celulares. */
+  }
+
+  .col-3,
+  .col-9 {
+    width: 100%; /* Hace que cada columna ocupe toda la pantalla. */
+  }
+
+  main > section:first-child {
+    grid-template-columns: 1fr; /* Muestra un producto por fila. */
+  }
+}
+
+/* Centra el texto del pie de pagina. */
+footer {
+  color: var(--wood-brown); /* Pinta el texto del pie de cafe. */
+  text-align: center; /* Centra el texto del pie. */
+  order: 1; /* Coloca el pie despues del contenido. */
+}
