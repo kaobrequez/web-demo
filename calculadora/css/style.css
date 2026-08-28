@@ -1,0 +1,51 @@
+body {
+    font-family: 'Cascadia Code', monospace; /* Define la tipografía principal del cuerpo (con un punto y coma extra eliminado) */
+    display: flex;                           /* Activa el modelo Flexbox para alinear contenido facilmente */
+    justify-content: center;                 /* Centra la calculadora horizontalmente en la pantalla */
+    align-items: center;                     /* Centra la calculadora verticalmente en la pantalla */
+    height: 100vh;                           /* Hace que el cuerpo ocupe el 100% de la altura visible de la ventana */
+    margin: 0;                               /* Elimina los márgenes por defecto del navegador */
+    background-color: #1f1e1e;               /* Establece un color de fondo gris muy oscuro */
+}
+
+.calculadora {
+    background-color: #9d82c2;             /* Fondo de la tarjeta en tono morado / lavanda */
+    padding: 20px;                           /* Espacio interno entre el borde y los elementos dentro */
+    border-radius: 20px;                     /* Curvatura pronunciada en las cuatro esquinas */
+    display: flex;                           /* Usa Flexbox interno para organizar los elementos */
+    flex-direction: column;                  /* Apila los elementos verticalmente (uno debajo de otro) */
+    gap: 10px;                               /* Espacio constante de 10px entre cada elemento interno */
+    width: 300px;                            /* Ancho fijo de la calculadora */
+    box-shadow: 0 4px 8px rgba(141, 248, 239, 0.904); /* Sombra turquesa neón hacia abajo (anula la sombra blanca anterior) */
+}
+
+h2 {
+    margin-top: 0;                           /* Quita el espacio extra superior del título */
+    text-align: center;                      /* Centra el texto del título horizontalmente */
+}
+
+input, select, button {                      /* Aplica estos estilos a las cajas de texto, lista desplegable y botón: */
+    font-family: inherit;                    /* Mantiene la tipografía consistente con el resto del cuerpo */
+    padding: 8px;                            /* Relleno interno para hacerlos más altos y cómodos */
+    font-size: 1rem;                         /* Tamaño del texto relativo estándar */
+    border: 1px solid #ccc;                /* Borde delgado de color gris claro */
+    border-radius: 10px;                     /* Redondea las esquinas de los controles */
+}
+
+button {
+    background-color: #007bff;               /* Color de fondo del botón (azul) */
+    color: white;                            /* Color del texto del botón (blanco) */
+    border: none;                            /* Quita el borde por defecto que aplica el navegador */
+    cursor: pointer;                         /* Cambia el puntero del ratón a una "manita" al pasar por encima */
+    margin-top: 10px;                        /* Agrega una separación extra en la parte superior */
+}
+
+button:hover {                               /* Estilos que se activan al colocar el cursor SOBRE el botón: */
+    background-color: #0056b3;               /* Cambia a un azul más oscuro para simular interacción */
+}
+
+.resultado {
+    font-weight: bold;                       /* Aplica texto en negrita al contenedor del resultado */
+    text-align: center;                      /* Centra el texto del resultado */
+    margin-top: 10px;                        /* Espacio de separación en la parte superior del resultado */
+}
